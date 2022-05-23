@@ -12,7 +12,7 @@
       <img class="logo" src="" alt="Логотип Интернет-магазина Девайс">
     </a>
     <nav class="navigation">
-      <form action="" method="get">
+      <form action="https://echo.htmlacademy.ru/" method="get">
         <input class="search" type="search" placeholder="Поиск по сайту">
         <button type="submit">Найти</button>
       </form>
@@ -62,6 +62,12 @@
           <p class="slider-slogan">Порхает как бабочка, жалит как пчела!</p>
           <p class="slider-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="" href="#">Подробнее</a>
+          <dl class="slider-benefits">
+            <dt>Дальность полета</dt>
+            <dd>800 м</dd>
+            <dt>Радиус поражения</dt>
+            <dd>50 м</dd>
+          </dl>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button slider-pagination-button-current" type="button">
@@ -79,16 +85,6 @@
               </button>
             </li>
           </ol>
-          <table>
-            <tr>
-              <td>Дальность полета</td>
-              <td>800 м</td>
-            </tr>
-            <tr>
-              <td>Радиус поражения</td>
-              <td>50 м</td>
-            </tr>
-          </table>
         </li>
         <!-- 2 слайд -->
         <li class="slider-item">
@@ -102,6 +98,10 @@
           <p class="slider-slogan">Худеем правильно!</p>
           <p class="slider-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="" href="#">Подробнее</a>
+          <dl class="slider-benefits">
+            <dt>Без подзарядки</dt>
+            <dd>48 часов</dd>
+          </dl>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button" type="button">
@@ -119,12 +119,6 @@
               </button>
             </li>
           </ol>
-          <table>
-            <tr>
-              <td>Без подзарядки</td>
-              <td>48 часов</td>
-            </tr>
-          </table>
         </li>
         <!-- 3 слайд -->
         <li class="slider-item">
@@ -138,6 +132,14 @@
           <p class="slider-slogan">Делай селфи, как Бен Стиллер!</p>
           <p class="slider-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
           <a class="" href="#">Подробнее</a>
+          <dl class="slider-benefits">
+            <dt>Длина палки</dt>
+            <dd>8,5 м</dd>
+            <dt>Вес палки</dt>
+            <dd>5 кг</dd>
+            <dt>Материал</dt>
+            <dd>Карбон</dd>
+          </dl>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button" type="button">
@@ -155,20 +157,6 @@
               </button>
             </li>
           </ol>
-          <table>
-            <tr>
-              <td>Длина палки</td>
-              <td>8,5 м</td>
-            </tr>
-            <tr>
-              <td>Вес палки</td>
-              <td>5 кг</td>
-            </tr>
-            <tr>
-              <td>Материал</td>
-              <td>Карбон</td>
-            </tr>
-          </table>
         </li>
       </ul>
     </section>
@@ -271,13 +259,69 @@
       </ul>
       <a class="button-feedback" href="#">Напишите нам</a>
     </section>
-
-    <section>
-      <!-- Рассылка  -->
+    <!-- Рассылка  -->
+    <section class="subscribe ">
+      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <p>Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+      <p>Это бесплатно</p>
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label for="subscribe-email">
+          <span class="visually-hidden">Email</span>
+        </label>
+        <input class="field" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
+        <button class="button subscribe-button" type="submit">Подписаться</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer-page">
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Адрес</h2>
+      <img class="footer-contacts-logo" src="" alt="Логотип Интернет-магазина Девайс">
+      <address class="footer-contacts-address">
+        <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+      </address>
+    </section>
+    <nav class="footer-navigation">
+      <ul class="footer-navigation-list">
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link" href="#">Доставка</a>
+        </li>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link" href="#">Гарантия</a>
+        </li>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="footer-social">
+      <h2 class="visually-hidden">Соцсети</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="button" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Телеграмм</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="button" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Телефон</h2>
+      <p>Тел.:<a class="footer-phone" href="tel:+8128121212">+7 (812) 812-12-12</a></p>
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
     </section>
 
 
-  </main>
+  </footer>
 </body>
 
 </html>
