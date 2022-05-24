@@ -76,15 +76,33 @@
     </header>
     <section class="catalog-products">
       <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-      <ul>
-        <li> фильтр:</li>
-        <li>сортировка:</li>
-        <li>
+      <ul class="catalog-option-list">
+        <li class="catalog-option-item">
+          фильтр:
+        </li>
+        <li class="catalog-option-item">
+          сортировка:
+        </li>
+        <li class="catalog-option-item">
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Популярные</option>
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
+        </li>
+        <li class="catalog-option-item">
+          <div class="sorting-options">
+            <a class="sorting-arrow" href="#" aria-label="Сортировка по возрастанию">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 0L11.5 10H0.5" fill="black" />
+              </svg>
+            </a>
+            <a class="sorting-arrow" href="#" aria-label="Сортировка по убыванию">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 10L0.499999 9.61651e-07L11.5 0" fill="black" />
+              </svg>
+            </a>
+          </div>
         </li>
       </ul>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -128,6 +146,37 @@
         </fieldset>
         <button class="button" type="submit">Показать</button>
       </form>
+      <ul class="product-list">
+        <li class="product-card">
+          <a class=" product-card-link" href="product.html">
+            <img class="product-card-image" src="" alt="">
+            <h3 class="product-card-title">Любительская селфи-палка</h3>
+          </a>
+          <b class="product-card-price">500 ₽</b>
+        </li>
+        <li class="product-card">
+          <a class=" product-card-link" href="product.html">
+            <img class="product-card-image" src="" alt="">
+            <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+          </a>
+          <b class="product-card-price">1500 ₽</b>
+        </li>
+        <li class="product-card">
+          <a class=" product-card-link" href="product.html">
+            <img class="product-card-image" src="" alt="">
+            <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+          </a>
+          <b class="product-card-price">2500 ₽</b>
+        </li>
+        <li class="product-card">
+          <a class=" product-card-link" href="product.html">
+            <img class="product-card-image" src="" alt="">
+            <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+          </a>
+          <b class="product-card-price">1500 ₽</b>
+        </li>
+      </ul>
+    </section>
     </section>
 
 
