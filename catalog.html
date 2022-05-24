@@ -76,6 +76,17 @@
     </header>
     <section class="catalog-products">
       <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+      <ul>
+        <li> фильтр:</li>
+        <li>сортировка:</li>
+        <li>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Популярные</option>
+            <option value="cheap">Сначала дешёвое</option>
+            <option value="expensive">Сначала дорогое</option>
+          </select>
+        </li>
+      </ul>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Цвет</legend>
@@ -102,11 +113,19 @@
             </li>
           </ul>
         </fieldset>
-
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Bluetooth</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="control-input" type="radio" name="Bluetooth" value="have">Есть</label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="control-input" type="radio" name="Bluetooth" value="no">Нет</label>
+            </li>
+          </ul>
         </fieldset>
-
         <button class="button" type="submit">Показать</button>
       </form>
     </section>
