@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
       <img class="logo" src="images/svg/logo-header.svg" width="145" height="36" alt="Логотип Интернет-магазина Девайс">
     </a>
     <nav class="navigation-user">
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form class="search" action="https://echo.htmlacademy.ru/" method="get">
         <label for="site-search">
           <span class="visually-hidden">Поиск</span>
         </label>
@@ -34,25 +35,25 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link-dropdown" href="#">Каталог товаров</a>
+          <a class="navigation-link" href="#">Каталог товаров</a>
           <ul class="navigation-item-dropdown">
             <li>
-              <a href="#">Виртуальная реальность</a>
+              <a class="navigation-link-dropdown" href="#">Виртуальная реальность</a>
             </li>
             <li>
-              <a href="catalog.html">Моноподы для cелфи</a>
+              <a class="navigation-link-dropdown" href="catalog.html">Моноподы для cелфи</a>
             </li>
             <li>
-              <a href="#">Экшн-камеры</a>
+              <a class="navigation-link-dropdown" href="#">Экшн-камеры</a>
             </li>
             <li>
-              <a href="#">Фитнес-браслеты</a>
+              <a class="navigation-link-dropdown" href="#">Фитнес-браслеты</a>
             </li>
             <li>
-              <a href="#">Умные часы</a>
+              <a class="navigation-link-dropdown" href="#">Умные часы</a>
             </li>
             <li>
-              <a href="#">Квадрокоптеры</a>
+              <a class="navigation-link-dropdown" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </li>
@@ -207,17 +208,17 @@
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
       <ul class="description-list">
-        <li>
+        <li class="description-item">
           Меловые линии
         </li>
-        <li>
+        <li class="description-item">
           СДИК
         </li>
-        <li>
+        <li class="description-item">
           ТоксБерри
         </li>
       </ul>
-      <a class="description-more" href="#">Подробнее</a>
+      <a class="description-more" href="#">Подробнее о нас</a>
     </section>
     <!-- Контакты  -->
     <section class="contacts">
