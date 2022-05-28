@@ -59,6 +59,7 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   text-align: center;
+  letter-spacing: 0.2em;
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
@@ -76,14 +77,26 @@ body {
   text-decoration: none;
 }
 
-/* Slider */
 
-.slider-slogan {
+.title {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 
 }
+
+.button {
+  font-family: "Raleway", sans-serif;
+  line-height: 21px;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+/* Slider */
 
 .slider-desc {
   color: #444444;
@@ -99,14 +112,6 @@ body {
   font-size: 36px;
 }
 
-.slider-more {
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
 /*Product-list*/
 
@@ -122,24 +127,21 @@ body {
 
 /*Advantages*/
 
-.advantages-item-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
-
-}
 
 .advantages-item p {
   color: #444444;
 }
 
-/*Description*/
-
-.description-title {
+.delivery-form {
   font-family: "Raleway", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
+
+
+/*Description*/
 
 .description-item {
   line-height: 20px;
@@ -147,24 +149,25 @@ body {
 
 }
 
-.description-more {
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
 /*Contacts*/
 
-.contacts-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
+.contacts-desc {
+  color: #444444;
 }
+
 
 .contacts-subtitle {
   font-size: 24px;
   font-weight: 700;
+}
+
+.contacts-address {
+
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: #444444;
+  text-decoration-line: underline;
 }
