@@ -171,3 +171,35 @@ body {
   color: #444444;
   text-decoration-line: underline;
 }
+
+
+/*Subscribe*/
+
+.subscribe p {
+  color: #444444;
+}
+
+/*Footer*/
+
+.footer-page {
+  background-color: #444444;
+  color: #FFFFFF;
+}
+
+.footer-contacts-address {
+
+  font-style: normal;
+
+}
+
+.footer-navigation-link {
+
+  font-family: "Raleway", sans-serif;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  background-color: #444444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
