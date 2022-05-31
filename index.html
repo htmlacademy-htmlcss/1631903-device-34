@@ -20,7 +20,7 @@
         <input class="searchquery" type="search" name="search" id="site-search" placeholder="Текст поиска">
         <button type="submit">Найти</button>
       </form>
-      <ul class="navigation-user-list">
+      <ul class="navigation-user-list list-reset">
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#">Войти</a>
         </li>
@@ -33,7 +33,7 @@
       </ul>
     </nav>
     <nav class="navigation">
-      <ul class="navigation-list">
+      <ul class="navigation-list list-reset">
         <li class="navigation-item">
           <a class="navigation-link" href="#">Каталог товаров</a>
           <ul class="navigation-item-dropdown">
@@ -73,11 +73,12 @@
     <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
     <section class="slider">
       <h2 class="visually-hidden">Слайдер с карточками товаров</h2>
-      <ul class="slider-list">
+      <ul class="slider-list list-reset">
         <!-- 1 слайд -->
         <li class="slider-item">
           <img class="slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер ">
           <h3 class="title slider-slogan">Порхает как бабочка, жалит как пчела!</h3>
+          <p class="slider-number">01</p>
           <p class="slider-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button slider-more" href="#">Подробнее</a>
           <dl class="slider-benefits">
@@ -91,6 +92,7 @@
         <li class="slider-item">
           <img class="slider-image" src="images/slider-2.png" width="560" height="560" alt="Мотивирующие фитнес-браслеты">
           <h3 class="title slider-slogan">Худеем правильно!</h3>
+          <p class="slider-number">02</p>
           <p class="slider-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="button slider-more" href="#">Подробнее</a>
           <dl class="slider-benefits">
@@ -102,6 +104,7 @@
         <li class="slider-item">
           <img class="slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи ">
           <h3 class="title slider-slogan">Делай селфи, как Бен Стиллер!</h3>
+          <p class="slider-number">03</p>
           <p class="slider-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
           <a class="button slider-more" href="#">Подробнее</a>
           <dl class="slider-benefits">
@@ -116,26 +119,26 @@
       </ul>
       <div>
         <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
+          <span class="">Предыдущее фото</span>
         </button>
         <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
+          <span class="">Следующее фото</span>
         </button>
       </div>
-      <ol class="slider-pagination">
+      <ol class="slider-pagination list-reset">
         <li class="slider-pagination-item">
           <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">1 слайд</span>
+            <span class="">1 слайд</span>
           </button>
         </li>
         <li class="slider-pagination-item">
           <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">2 слайд</span>
+            <span class="">2 слайд</span>
           </button>
         </li>
         <li class="slider-pagination-item">
           <button class="slider-pagination-button slider-pagination-button-current" type="button">
-            <span class="visually-hidden">3 слайд</span>
+            <span class="">3 слайд</span>
           </button>
         </li>
       </ol>
@@ -144,7 +147,7 @@
     <!-- СПисок товаров -->
     <section class="product-list">
       <h2 class="visually-hidden">Каталог товаров</h2>
-      <ul>
+      <ul class="list-reset">
         <li>
           <a class="product-list-item" href="#">
             <h3>Виртуальная реальность</h3>
@@ -186,21 +189,21 @@
     <!-- Доставка  -->
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="advantages-list">
-        <li class="advantages-item">
+      <ul class="advantages-list list-reset">
+        <li class="advantages-item advantages-item-delivery">
           <h3 class="title advantages-item-title">Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-guarantee">
           <h3 class="title advantages-item-title">Гарантия</h3>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-credit">
           <h3 class="title advantages-item-title">Кредит</h3>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
         </li>
       </ul>
-      <button class="delivery-form" type="button">Доставим редкий товар под заказ</button>
+      <button class="delivery-form-button" type="button">Доставим редкий товар под заказ</button>
     </section>
     <!-- О нас  -->
     <section class="description">
@@ -230,7 +233,7 @@
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <h3 class="contacts-subtitle">Время работы</h3>
-        <ul class="contacts-schedule">
+        <ul class="contacts-schedule list-reset">
           <li class="contacts-schedule-item">
             пн—пт: с 10:00 до 22:00
           </li>
@@ -266,7 +269,7 @@
       </address>
     </section>
     <nav class="footer-navigation">
-      <ul class="footer-navigation-list">
+      <ul class="footer-navigation-list list-reset">
         <li class="footer-navigation-item">
           <a class="footer-navigation-link" href="#">Доставка</a>
         </li>
@@ -280,7 +283,7 @@
     </nav>
     <section class="footer-social">
       <h2 class="visually-hidden">Соцсети</h2>
-      <ul class="footer-social-list">
+      <ul class="footer-social-list list-reset">
         <li class="footer-social-item">
           <a class="social-button" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграмм</span>
@@ -302,7 +305,7 @@
       <h2 class="visually-hidden">Телефон</h2>
       <p>Тел.:<a class="footer-phone" href="tel:+8128121212">+7 (812) 812-12-12</a></p>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img src="images/svg/htmlacademy.svg" alt="HTML Academy">
+        <img src="images/svg/htmlacademy.svg" width="115" height="33" alt="HTML Academy">
       </a>
     </section>
 
