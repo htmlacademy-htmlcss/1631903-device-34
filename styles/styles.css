@@ -25,15 +25,26 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  width: 100%;
-  max-width: 1160px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #FFFFFF;
+
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 }
+
 
 img {
   display: block;
@@ -58,20 +69,57 @@ img {
   clip-path: inset(100%);
 }
 
-.list-reset {
 
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
+
+
 
 
 .page-header {
   color: #000000;
-  background-color: #FFE17F;
+
 }
 
 /*Navigation*/
+
+
+.navigation {
+
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+  background-color: #FFE17F;
+
+  /*
+  outline: 2px solid rgba(59, 14, 182, 0.993);
+  outline-offset: -2px;
+  */
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  outline: 2px solid rgba(5, 90, 20, 0.993);
+  outline-offset: -2px;
+}
+
+.navigation-item {}
+
+.navigation-user {
+  width: 560px;
+
+  outline: 2px solid rgba(235, 6, 6, 0.993);
+  outline-offset: -2px;
+}
+
+.navigation-list-dropdown {
+
+  outline: 2px solid rgba(183, 233, 5, 0.993);
+  outline-offset: -2px;
+}
+
 
 .navigation-user-link {
   text-align: center;
@@ -108,8 +156,16 @@ img {
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
+
+
 }
 
+.main-container {
+  flex-grow: 1;
+
+
+
+}
 
 .title {
   font-family: "Raleway", sans-serif;
@@ -129,8 +185,35 @@ img {
 
 }
 
+
+
 /* Slider */
 
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+
+  outline: 2px solid rgba(230, 11, 113, 0.993);
+  outline-offset: -2px;
+
+}
+
+.slider-list {
+  display: flex;
+  outline: 2px solid rgba(13, 223, 65, 0.993);
+  outline-offset: -2px;
+
+}
+
+.slider-item {
+
+  outline: 2px solid rgba(13, 34, 223, 0.993);
+  outline-offset: -2px;
+}
 
 .slider-number {
 
@@ -156,21 +239,54 @@ img {
 
 /*Product-list*/
 
-.product-list-item {
+.products {
+  width: 1160px;
+  margin: 0 auto;
+
+}
+
+.product-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+
+}
+
+.product-item {
+  width: 160px;
+
+
+  outline: 2px solid rgba(223, 13, 94, 0.993);
+  outline-offset: -2px;
+}
+
+
+.product-item-link {
   font-family: "Raleway", sans-serif;
+
   line-height: 24px;
-  text-align: center;
   color: #000000;
   text-decoration: none;
 
 }
 
-.product-list-item-img {
-
-  background-color: #FFE17F;
-}
-
 /*Advantages*/
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+
+  outline: 2px solid rgba(5, 211, 238, 0.993);
+  outline-offset: -2px;
+}
+}
 
 
 .advantages-item p {
