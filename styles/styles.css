@@ -98,8 +98,16 @@ body {
 }
 
 .search {
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
+}
+
+.button-search {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
 }
 
 
@@ -107,7 +115,7 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   text-align: center;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
@@ -142,10 +150,11 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   color: #000000;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 
 }
 
@@ -202,7 +211,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
   color: #000000;
   text-decoration: none;
 
@@ -248,7 +257,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #F0F0F0;
   width: 1160px;
@@ -328,22 +337,61 @@ body {
   color: #FFFFFF;
 }
 
-.footer-contacts-address {
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
 
-  font-style: normal;
 
 }
 
-.footer-navigation-link {
+.footer-contacts {
+  width: 300px;
+
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+
+.footer-contacts-address {
+
+  font-style: normal;
+  text-align: left;
+
+
+
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+.footer-advantages-list {
+  display: flex;
+}
+
+.footer-advantages-link {
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   text-align: center;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   color: #FFFFFF;
   background-color: #444444;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-contacts-tel {
+  text-align: right;
 }
 
 .footer-phone {
@@ -352,6 +400,7 @@ body {
   text-decoration-line: underline;
 
 }
+
 
 /*Catalog*/
 
@@ -367,11 +416,24 @@ body {
   background-color: #F0F0F0;
 }
 
+.catalog-products-wrapper {
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+}
+
+.catalog-right-column {
+  width: 840px;
+
+}
+
 .catalog-option-item {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 
 }
@@ -393,7 +455,7 @@ body {
 
 /*Product-list*/
 
-.product-list {
+.product-items {
 
   background-color: #FFFFFF;
 }
@@ -416,6 +478,10 @@ body {
 
   line-height: 21px;
   color: #444444;
+}
+
+.button-load-more {
+  background-color: #FFFFFF;
 }
 
 /*Pagination*/
@@ -444,6 +510,6 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   color: #000000;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
