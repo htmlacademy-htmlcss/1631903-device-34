@@ -13,65 +13,69 @@
       <a class="main-header-logo" href="#">
         <img class="logo" src="images/svg/logo.svg" width="145" height="36" alt="Логотип Интернет-магазина Девайс">
       </a>
-    </div>
-    <nav class="navigation">
       <div class="navigation-container container">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <form class="search" action="https://echo.htmlacademy.ru/" method="get">
-              <label for="site-search">
-                <span class="visually-hidden">Поиск</span>
-              </label>
-              <input class="searchquery" type="search" name="search" id="site-search" placeholder="Текст поиска">
-              <button class="button-search" type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="navigation-item navigation-user">
-            <a class="navigation-user-link" href="#">Войти</a>
-          </li>
-          <li class="navigation-item navigation-user">
-            <a class="navigation-user-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item navigation-user">
-            <a class="navigation-user-link" href="#">Корзина</a>
-          </li>
-        </ul>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
-            <ul class="navigation-item-dropdown">
-              <li>
-                <a class="navigation-link-dropdown" href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a class="navigation-link-dropdown" href="catalog.html">Моноподы для cелфи</a>
-              </li>
-              <li>
-                <a class="navigation-link-dropdown" href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a class="navigation-link-dropdown" href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a class="navigation-link-dropdown" href="#">Умные часы</a>
-              </li>
-              <li>
-                <a class="navigation-link-dropdown" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <form class="search" action="https://echo.htmlacademy.ru/" method="get">
+                <label for="site-search">
+                  <span class="visually-hidden">Поиск</span>
+                </label>
+                <input class="searchquery" type="search" name="search" id="site-search" placeholder="Текст поиска">
+                <button class="button-search" type="submit">Найти</button>
+              </form>
+            <li class="navigation-item navigation-item-dropdown">
+              <a class="navigation-link" href="#">Каталог товаров</a>
+              <ul class="navigation-dropdown">
+                <li>
+                  <a class="navigation-link-dropdown" href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a class="navigation-link-dropdown" href="catalog.html">Моноподы для cелфи</a>
+                </li>
+                <li>
+                  <a class="navigation-link-dropdown" href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a class="navigation-link-dropdown" href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a class="navigation-link-dropdown" href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a class="navigation-link-dropdown" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="navigation navigation-user">
+          <ul class="navigation-list-user">
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">Войти</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">Корзина</a>
+            </li>
+          </ul>
+          <ul class="navigation-list-advantages">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </div>
+
   </header>
   <main class="main-container main-index">
     <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
@@ -232,6 +236,7 @@
         <button class="button" type="button">Доставка</button>
         <button class="button" type="button">Гарантия</button>
         <button class="button" type="button">Кредит</button>
+      </div>
     </section>
     <div class="container">
       <button class="delivery-form-button" type="button">Доставим редкий товар под заказ</button>
