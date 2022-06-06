@@ -25,22 +25,21 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  width: 100%;
-  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #FFFFFF;
-}
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 
 
@@ -50,45 +49,113 @@ img {
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+  overflow: hidden;
 }
-
-.list-reset {
-
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 
 .page-header {
   color: #000000;
-  background-color: #FFE17F;
+
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 /*Navigation*/
 
-.navigation-user-link {
+
+
+
+.navigation-container {
+  display: flex;
+
+  background-color: #FFE17F;
+
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navigation-user {
+  display: flex;
+  margin-left: auto;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  list-style-type: none;
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+.navigation-list-user {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  margin: 0;
+  padding: 0;
+  padding-right: 60px;
+
+  list-style-type: none;
+}
+
+.navigation-list-advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-right: 60px;
+  list-style-type: none;
+}
+
+
+
+
+.navigation-item-link {
+  display: block;
+  padding: 2px 2px;
   text-align: center;
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
 
+  /* outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px; */
+}
+
 }
 
 .search {
+  width: 517px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
+
+}
+
+.button-search {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
 }
 
 
 .navigation-link {
-
+  display: block;
+  padding: 2px 2px;
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   text-align: center;
@@ -98,16 +165,31 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 
+  /* outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px; */
+}
+
+
+.navigation-dropdown {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
 }
 
 .navigation-link-dropdown {
-
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
+
+
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 
@@ -126,18 +208,38 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 
 }
 
 /* Slider */
 
-
-.slider-number {
-
-  font-size: 180px;
-  font-weight: 700;
-  color: #EBEBEB;
+.slider-list {
+  position: relative;
+  display: flex;
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
 }
+
+.slider-list::after {
+  position: absolute;
+  content: "01";
+  font-size: 180px;
+  line-height: 30px;
+  width: 250px;
+  height: 135px;
+  color: #000000;
+  background-color: #FFE17F;
+  background-size: 1160px 300px;
+  left: 1001px;
+  top: 219px;
+}
+
+.slider-image {
+  display: block;
+}
+
+
 
 .slider-desc {
   color: #444444;
@@ -149,28 +251,48 @@ img {
 }
 
 .slider-benefits dd {
-
   font-size: 36px;
 }
 
-
 /*Product-list*/
 
-.product-list-item {
+
+
+.product-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.product-item {
+  width: 160px;
+
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+.product-item-link {
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   line-height: 24px;
-  text-align: center;
+  letter-spacing: -0.02em;
   color: #000000;
   text-decoration: none;
 
 }
 
-.product-list-item-img {
 
-  background-color: #FFE17F;
-}
 
 /*Advantages*/
+
+.advantages {
+
+  background-color: #F0F0F0;
+
+}
 
 
 .advantages-item p {
@@ -212,7 +334,18 @@ img {
 }
 
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
 /*Description*/
+
+.description {
+  width: 520px;
+}
 
 .description p {
   color: #444444;
@@ -226,6 +359,10 @@ img {
 
 
 /*Contacts*/
+
+.contacts {
+  width: 532px;
+}
 
 .contacts-desc {
   color: #444444;
@@ -250,6 +387,12 @@ img {
 
 /*Subscribe*/
 
+.subscribe {
+
+  background-color: #F0F0F0;
+}
+
+
 .subscribe p {
   color: #444444;
 }
@@ -261,13 +404,44 @@ img {
   color: #FFFFFF;
 }
 
-.footer-contacts-address {
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
 
-  font-style: normal;
 
 }
 
-.footer-navigation-link {
+.footer-contacts {
+  width: 300px;
+
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+
+.footer-contacts-address {
+
+  font-style: normal;
+  text-align: left;
+
+
+
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+
+  outline: 2px solid rgba(255, 5, 5, 0.993);
+  outline-offset: -2px;
+}
+
+.footer-advantages-list {
+  display: flex;
+}
+
+.footer-advantages-link {
 
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -279,12 +453,21 @@ img {
   text-transform: uppercase;
 }
 
+.footer-social-list {
+  display: flex;
+}
+
+.footer-contacts-tel {
+  text-align: right;
+}
+
 .footer-phone {
 
   color: #FFFFFF;
   text-decoration-line: underline;
 
 }
+
 
 /*Catalog*/
 
@@ -298,6 +481,19 @@ img {
 .catalog-products {
 
   background-color: #F0F0F0;
+}
+
+.catalog-products-wrapper {
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+}
+
+.catalog-right-column {
+  width: 840px;
+
 }
 
 .catalog-option-item {
@@ -326,7 +522,7 @@ img {
 
 /*Product-list*/
 
-.product-list {
+.product-items {
 
   background-color: #FFFFFF;
 }
@@ -349,6 +545,10 @@ img {
 
   line-height: 21px;
   color: #444444;
+}
+
+.button-load-more {
+  background-color: #FFFFFF;
 }
 
 /*Pagination*/
