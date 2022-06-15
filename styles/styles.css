@@ -314,7 +314,7 @@ body {
   color: #000000;
   background-color: #FFE17F;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 
 }
 
@@ -351,7 +351,7 @@ body {
 }
 
 
-.slider-list::after {
+.slider-list::before {
   position: absolute;
   content: "01";
   font-size: 180px;
@@ -359,16 +359,21 @@ body {
   font-weight: 700;
   text-align: right;
   color: #FFFFFF;
-  background-color: #FFE17F;
-  width: 1160px;
-  height: 126px;
+  width: 250px;
+  height: 135px;
+  right: 50px;
   z-index: -1;
-
-
 
 }
 
-
+.slider-list::after {
+  position: absolute;
+  content: "";
+  background-color: #FFE17F;
+  width: 1160px;
+  height: 126px;
+  z-index: -2;
+}
 
 .slider-item {
   width: 560px;
@@ -1176,7 +1181,7 @@ body {
 
 .pagination {
   display: flex;
-
+  box-sizing: border-box;
   width: 760px;
   margin: 0 40px 78px;
   padding: 0;
@@ -1184,7 +1189,13 @@ body {
   background-color: #EBEBEB;
 }
 
+.pagination-item:first-child {
+  margin-right: 146px;
+}
 
+.pagination-item:last-child {
+  margin-left: auto;
+}
 
 .pagination-link {
   display: block;
@@ -1201,15 +1212,10 @@ body {
 
 }
 
-
-
 .pagination-link-control {
   display: block;
   box-sizing: border-box;
-  width: 140px;
-  height: 70px;
   padding: 25px;
-
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   color: #000000;
