@@ -75,6 +75,7 @@ body {
   display: block;
   position: absolute;
   margin-top: -22px;
+  margin-left: 60px;
 
 }
 
@@ -100,7 +101,7 @@ body {
 .navigation-user {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   margin-right: 60px;
 
   /* outline: 2px solid rgba(255, 5, 5, 0.993);
@@ -116,8 +117,7 @@ body {
   padding: 0;
   align-items: flex-start;
   list-style-type: none;
-  /* outline: 2px solid rgba(255, 5, 5, 0.993);
-  outline-offset: -2px; */
+
 }
 
 
@@ -125,63 +125,51 @@ body {
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 520px;
   margin: 0;
   padding: 0;
   margin-top: 38px;
-  margin-bottom: 10px;
-
-  justify-content: space-between;
-
+  margin-bottom: 30px;
   list-style-type: none;
+
+
 }
 
 
 
-.navigation-user-item {
-  position: relative;
+.navigation-user-link {
+  display: block;
+  padding: 5px 10px 5px 28px;
+  text-align: center;
+  color: #000000;
+  background-color: #FFE17F;
+  text-decoration: none;
+
+
 
 }
 
-
-.navigation-user-item-entrance::before {
-
-  position: absolute;
-  content: "";
-  background-image: url(/images/svg/entrance.svg);
-  width: 13px;
-  height: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+.navigation-user-item-entrance {
+  background-image: url(../images/svg/entrance.svg);
   background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 13px 12px;
 }
 
-.navigation-user-item-compare::before {
-
-  position: absolute;
-  content: "";
-  background-image: url(/images/svg/compare.svg);
-  padding-right: 12px;
-  width: 10px;
-  height: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+.navigation-user-item-compare {
+  background-image: url(../images/svg/compare.svg);
   background-repeat: no-repeat;
-
+  background-position: center left;
+  background-size: 10px 12px;
 }
 
-.navigation-user-item-cart::before {
-  position: absolute;
-  content: "";
-  background-image: url(/images/svg/cart.svg);
-  padding-right: 12px;
-  width: 16px;
-  height: 14px;
-  top: 50%;
-  transform: translateY(-50%);
+.navigation-user-item-cart {
+  background-image: url(../images/svg/cart.svg);
   background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 16px 14px;
 }
-
 
 .navigation-list-advantages {
   display: flex;
@@ -189,8 +177,6 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-
-
   list-style-type: none;
 }
 
@@ -216,27 +202,6 @@ body {
   padding-right: 0;
 }
 
-.navigation-item-dropdown-link {
-  display: block;
-  padding-left: 0;
-  padding-right: 60px;
-}
-
-.navigation-item-link {
-  display: block;
-  padding: 10px 10px 10px 30px;
-  text-align: center;
-  color: #000000;
-  background-color: #FFE17F;
-  text-decoration: none;
-
-  /* outline: 2px solid rgba(255, 5, 5, 0.993);
-  outline-offset: -2px; */
-}
-
-.navigation-item-link:last-child {
-  padding-right: 0;
-}
 
 .search {
   width: 517px;
@@ -265,9 +230,23 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
 
+
+.navigation-item-dropdown-link {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  background-color: #FFE17F;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 15px 15px 0;
 
 }
+
+
 
 .navigation-dropdown-1st-column {
   display: flex;
@@ -321,6 +300,7 @@ body {
 
 
 .button {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   color: #000000;
@@ -328,6 +308,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
   cursor: pointer;
 
 }
@@ -557,70 +538,15 @@ body {
   background-repeat: no-repeat;
 }
 
-.product-item-glasses::before {
-  position: absolute;
-  content: "";
+.product-item-glasses {
   background-image: url(../images/svg/glasses.svg);
-  width: 160px;
-  height: 160px;
   background-repeat: no-repeat;
   background-color: #FFE17F;
-  z-index: -1;
 }
 
-.product-item-monopod::before {
-  position: absolute;
-  content: "";
+.product-item-monopod {
   background-image: url(../images/svg/monopod.svg);
-  width: 160px;
-  height: 160px;
   background-repeat: no-repeat;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.product-item-action-camera::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/svg/action-camera.svg);
-  width: 160px;
-  height: 160px;
-  background-repeat: no-repeat;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.product-item-fitness-bracelet::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/svg/fitness-bracelet.svg);
-  width: 160px;
-  height: 160px;
-  background-repeat: no-repeat;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.product-item-smart-watch::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/svg/smart-watch.svg);
-  width: 160px;
-  height: 160px;
-  background-repeat: no-repeat;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.product-item-quadrocopters::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/svg/quadrocopters.svg);
-  width: 160px;
-  height: 160px;
-  background-repeat: no-repeat;
-  background-color: #FFE17F;
-  z-index: -1;
 }
 
 /*Advantages*/
@@ -707,7 +633,7 @@ body {
 .advantages-button-active {
   background-color: #000000;
   color: #FFE17F;
-  padding-right: 130px;
+  padding-right: 132px;
 }
 
 .advantages-item {
