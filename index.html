@@ -93,45 +93,18 @@
     </header>
     <main class="main-container main-index">
       <h1 class="visually-hidden">Интернет-магазин Девайс.</h1>
-      <section class="slider">
-        <div class="container">
-          <h2 class="visually-hidden">Слайдер с карточками товаров.</h2>
-
-          <!--1 слайд-->
-          <div class="slider-list">
+      <section class="slider container">
+        <h2 class="visually-hidden">Слайдер с карточками товаров.</h2>
+        <div class="slider-wrapper">
+          <div class="slider-list slider-block1 block-show">
             <div class="slider-item-image">
               <img class="slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
-              <div class="slider-controls">
-                <button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото.</span>
-                </button>
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото.</span>
-                </button>
-              </div>
             </div>
             <div class="slider-item">
               <h3 class="slider-slogan">Порхает как бабочка, жалит как пчела!</h3>
               <p class="slider-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <div class="slider-more">
                 <a class="button slider-more-button" href="#">Подробнее</a>
-                <ol class="slider-pagination">
-                  <li class="slider-pagination-item">
-                    <button class="slider-pagination-button" type="button">
-                      <span class="visually-hidden">1 слайд</span>
-                    </button>
-                  </li>
-                  <li class="slider-pagination-item">
-                    <button class="slider-pagination-button" type="button">
-                      <span class="visually-hidden">2 слайд</span>
-                    </button>
-                  </li>
-                  <li class="slider-pagination-item">
-                    <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                      <span class="visually-hidden">3 слайд</span>
-                    </button>
-                  </li>
-                </ol>
               </div>
               <dl class="slider-benefits">
                 <dt>Дальность полета</dt>
@@ -140,17 +113,13 @@
                 <dd>50 м</dd>
               </dl>
             </div>
-
           </div>
-
-          <div class="slider-list">
+          <div class="slider-list slider-block2">
             <div class="slider-item-image">
               <img class="slider-image" src="images/slider-2.png" width="560" height="560" alt="Мотивирующие фитнес-браслеты.">
             </div>
             <div class="slider-item">
-
               <h3 class="title slider-slogan">Худеем правильно!</h3>
-
               <p class="slider-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <div class="slider-more">
                 <a class="button" href="#">Подробнее</a>
@@ -161,14 +130,12 @@
               </dl>
             </div>
           </div>
-
-          <div class="slider-list">
+          <div class="slider-list slider-block3">
             <div class="slider-item-image">
               <img class="slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи. ">
             </div>
             <div class="slider-item">
               <h3 class="title slider-slogan">Делай селфи, как Бен Стиллер!</h3>
-
               <p class="slider-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               <div class="slider-more">
                 <a class="button" href="#">Подробнее</a>
@@ -183,6 +150,32 @@
               </dl>
             </div>
           </div>
+
+          <div class="slider-controls">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+          </div>
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">1 слайд</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 слайд</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">3 слайд</span>
+              </button>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -228,31 +221,30 @@
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества.</h2>
         <div class="container advantages-container">
-          <div class="advantages-item">
+          <div class="advantages-button-wrapper">
             <div class="advantages-item-button">
-              <div class="advantages-item-button-delivery">
-                <button class="button" type="button">Доставка</button>
-              </div>
-              <div class="advantages-item-button-guarantee">
-                <button class="button" type="button">Гарантия</button>
-              </div>
-              <div class="advantages-item-button-credit">
-                <button class="button" type="button">Кредит</button>
-              </div>
+              <button class="button advantages-button advantages-button-active" type="button">Доставка</button>
             </div>
-            <div class="advantages-item-wrapper advantages-item-delivery">
+            <div class="advantages-item-button">
+              <button class="button advantages-button" type="button">Гарантия</button>
+            </div>
+            <div class="advantages-item-button">
+              <button class="button advantages-button" type="button">Кредит</button>
+            </div>
+          </div>
+          <div>
+            <div class="advantages-item advantages-item-delivery">
               <h3 class="advantages-item-title">Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-              </p>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
-          </div>
-          <div class="advantages-item advantages-item-guarantee">
-            <h3 class="advantages-item-title">Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </div>
-          <div class="advantages-item advantages-item-credit">
-            <h3 class="advantages-item-title">Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            <div class="advantages-item advantages-item-guarantee">
+              <h3 class="advantages-item-title">Гарантия</h3>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </div>
+            <div class="advantages-item advantages-item-credit">
+              <h3 class="advantages-item-title">Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            </div>
           </div>
         </div>
       </section>
