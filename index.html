@@ -13,7 +13,7 @@
         <a class="main-header-logo" href="#">
           <img class="logo" src="images/svg/logo.svg" width="145" height="36" alt="Логотип Интернет-магазина Девайс.">
         </a>
-        <div class="navigation-container container">
+        <div class="navigation-container">
           <nav class="navigation">
             <ul class="navigation-list">
               <li class="navigation-item">
@@ -28,14 +28,14 @@
               <li class="navigation-item navigation-item-dropdown">
                 <a class="navigation-item-dropdown-link" href="#">
                   Каталог товаров
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25" cy="25.79" r="24" stroke="#000" stroke-width="2" />
-                    <g clip-path="url(#a)">
-                      <path d="M33 24.79h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000" />
+                  <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.3" cx="25" cy="25.3889" r="24" stroke="black" stroke-width="2" />
+                    <g opacity="0.3" clip-path="url(#clip0_25205_452)">
+                      <path d="M33 24.3889H26V17.3889H24V24.3889H17V26.3889H24V33.3889H26V26.3889H33V24.3889Z" fill="black" />
                     </g>
                     <defs>
-                      <clipPath id="a">
-                        <path fill="#fff" transform="translate(17 17.79)" d="M0 0h16v16H0z" />
+                      <clipPath id="clip0_25205_452">
+                        <rect width="16" height="16" fill="white" transform="translate(17 17.3889)" />
                       </clipPath>
                     </defs>
                   </svg>
@@ -84,8 +84,11 @@
               <li class="navigation-user-item">
                 <a class="navigation-user-link navigation-user-item-compare" href="#">Сравнить</a>
               </li>
-              <li class="navigation-user-item">
-                <a class="navigation-user-link navigation-user-item-cart" href="#">Корзина</a>
+              <li class="navigation-user-item navigation-user-cart">
+                <a class="navigation-user-link navigation-user-item-cart" href="#">
+                  <span class="cart-number">2</span>
+                  Корзина
+                </a>
               </li>
             </ul>
             <ul class="navigation-list-advantages">
@@ -163,7 +166,7 @@
               </dl>
             </div>
           </div>
-
+          <!--
           <div class="slider-controls">
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущее фото.</span>
@@ -171,8 +174,8 @@
             <button class="slider-button slider-next" type="button">
               <span class="visually-hidden">Следующее фото.</span>
             </button>
-          </div>
-          <ol class="slider-pagination">
+          </div> -->
+          <!-- <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button" type="button">
                 <span class="visually-hidden">1 слайд</span>
@@ -188,7 +191,7 @@
                 <span class="visually-hidden">3 слайд</span>
               </button>
             </li>
-          </ol>
+          </ol> -->
         </div>
       </section>
 
@@ -199,32 +202,38 @@
           <ul class="product-list">
             <li class="product-item">
               <a class="product-item-link product-item-glasses" href="#">
-                <h3>Виртуальная реальность</h3>
+                <img class="product-image" src="images/svg/glasses.svg" width="160" height="160" alt="">
+                Виртуальная реальность
               </a>
             </li>
             <li class="product-item">
               <a class="product-item-link product-item-monopod" href="catalog.html">
-                <h3>Моноподы для селфи</h3>
+                <img class="product-image" src="images/svg/monopod.svg" width="160" height="160" alt="">
+                Моноподы для селфи
               </a>
             </li>
             <li class="product-item product-item-action-camera">
               <a class="product-item-link" href="#">
-                <h3>Экшн-камеры</h3>
+                <img class="product-image" src="images/svg/action-camera.svg" width="160" height="160" alt="">
+                Экшн-камеры
               </a>
             </li>
             <li class="product-item product-item-fitness-bracelet">
               <a class="product-item-link" href="#">
-                <h3>Фитнес-браслеты</h3>
+                <img class="product-image" src="images/svg/fitness-bracelet.svg" width="160" height="160" alt="">
+                Фитнес-браслеты
               </a>
             </li>
             <li class="product-item product-item-smart-watch">
               <a class="product-item-link" href="#">
-                <h3>Умные часы</h3>
+                <img class="product-image" src="images/svg/smart-watch.svg" width="160" height="160" alt="">
+                Умные часы
               </a>
             </li>
             <li class="product-item product-item-quadrocopters">
               <a class="product-item-link" href="#">
-                <h3>Квадрокоптеры</h3>
+                <img class="product-image" src="images/svg/quadrocopters.svg" width="160" height="160" alt="">
+                Квадрокоптеры
               </a>
             </li>
           </ul>
@@ -245,7 +254,7 @@
               <button class="button advantages-button" type="button">Кредит</button>
             </div>
           </div>
-          <div>
+          <div class="advantages-item-wrapper">
             <div class="advantages-item advantages-item-delivery">
               <h3 class="advantages-item-title">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -282,7 +291,9 @@
               ТоксБерри
             </li>
           </ul>
-          <a class="button description-more" href="#">Подробнее о нас</a>
+          <div class="description-more-wrapper">
+            <a class="button description-more" href="#">Подробнее о нас</a>
+          </div>
         </section>
 
         <!-- Контакты  -->
