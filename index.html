@@ -324,7 +324,22 @@
         </div>
       </section>
       <div class="delivery-form-wrapper container">
-        <button class="delivery-form-button" type="button">Доставим редкий товар под заказ</button>
+        <a class="button delivery-form-button" href="#">
+          <span class="car-icon">
+            <svg width="47" height="31" viewBox="0 0 47 31" xmlns="http://www.w3.org/2000/svg">
+              <path d="m46.7 15.4-6.5-8.2c-.3-.4-.7-.6-1.2-.6h-8.3V1.5C30.7.7 30 0 29.2 0H1.5C.7 0 0 .7 0 1.5S.7 3 1.5 3h26.2v21.7H15.8c-.6-1.9-2.4-3.3-4.5-3.3-2.6 0-4.8 2.2-4.8 4.8 0 2.6 2.2 4.8 4.8 4.8 2.1 0 3.9-1.4 4.5-3.3h13.4c.8 0 1.5-.7 1.5-1.5V9.6h7.6l5.7 7.3v7.9h-2.2c-.6-1.9-2.4-3.3-4.5-3.3-2.6 0-4.8 2.2-4.8 4.8 0 2.6 2.1 4.8 4.8 4.8 2.1 0 3.9-1.4 4.5-3.3h3.7c.8 0 1.5-.7 1.5-1.5v-9.9c0-.4-.1-.7-.3-1ZM11.3 28c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 1.8Zm26.1 0c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.9 1.8-1.8 1.8Z" fill="#000" />
+              <path d="M19.4 9.6c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5H4.8c-.8 0-1.5.7-1.5 1.5S4 9.6 4.8 9.6h14.6ZM17.7 14.7c0-.8-.7-1.5-1.5-1.5H1.5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h14.7c.8 0 1.5-.7 1.5-1.5Z" />
+            </svg>
+          </span>
+          <p>
+            Доставим редкий товар под заказ
+          </p>
+          <span class="info-icon-button">
+            <svg class="info-icon" width="2" height="12" viewBox="0 0 2 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z" />
+            </svg>
+          </span>
+        </a>
       </div>
 
       <!-- О нас  -->
@@ -456,7 +471,7 @@
       </div>
     </footer>
 
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-order">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -466,36 +481,39 @@
           <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
 
             <div class="order-info user-info">
-              <p class="field-group field-group-user">
+              <div class="field-group field-group-user">
                 <label class="form-label" for="order-form-name">
                   Ваше имя:
                 </label>
-                <input class="order-form-field" type="text" id="order-form-name" name="order-form-name" placeholder="Введите имя">
-              </p>
+                <input class="order-form-field order-field-name" type="text" id="order-form-name" name="order-form-name" placeholder="Введите имя" required>
+              </div>
 
-              <p class="field-group field-group-user ">
-                <label class="form-label" for="appointment-email">
+              <div class="field-group field-group-user ">
+                <label class="form-label" for="order-form-email">
                   Ваш e-mail:
                 </label>
-                <input class="order-form-field" type="email" name="order-form-email" id="order-form-email" placeholder="почта" required>
-              </p>
+                <input class="order-form-field order-field-email" type="email" name="order-form-email" id="order-form-email" placeholder="почта" required>
+                <span class="order-field-email-footnote">Забавный у вас адрес </span>
+              </div>
             </div>
             <div class="order-info products-info">
-              <p class="field-group field-group-product">
+              <div class="field-group field-group-product">
                 <label class="form-label" for="order-form-product">
                   Что нужно привезти:
                 </label>
-                <input class="order-form-field" type="text" name="order-form-product" id="order-form-product" placeholder="В свободной форме">
-              </p>
+
+                <input class="order-form-field" type="text" name="order-form-product" id="order-form-product" placeholder="В свободной форме" required>
+
+              </div>
 
               <div class="field-group field-group-selection">
-                <label class="form-label" for="quantity-products">Количество:</label>
+                <label class="form-label form-label-quantity" for="quantity-products">Количество:</label>
                 <div class="quantity-selection">
-                  <button class="button decrease-button">
+                  <button class="button quantity-selection-button decrease-button">
                     <span class="visually-hidden">Уменьшить количество.</span>
                   </button>
-                  <input class="order-form-field order-form-field-quantity" type="text" name="number" id="quantity-products" placeholder="1">
-                  <button class="button increase-button">
+                  <input class="order-form-field order-form-field-quantity" type="text" name="number" id="quantity-products" placeholder="1" required>
+                  <button class="button quantity-selection-button increase-button">
                     <span class="visually-hidden">Увеличить количество.</span>
                   </button>
                 </div>

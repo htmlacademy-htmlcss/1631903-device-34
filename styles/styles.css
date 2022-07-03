@@ -25,12 +25,6 @@
   font-display: swap;
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 html {
   height: 100%;
@@ -832,7 +826,6 @@ body {
   min-height: 258px;
   color: #000000;
   text-decoration: none;
-  border: 2px solid transparent;
   background-repeat: no-repeat;
 }
 
@@ -848,8 +841,8 @@ body {
 }
 
 .product-item-link:focus {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .product-item-link:active {
@@ -1045,56 +1038,66 @@ body {
 }
 
 .delivery-form-button {
-  display: inline-block;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #F0F0F0;
-  padding: 39px 320px;
+  width: 1160px;
   border: none;
 }
 
-.delivery-form-button::before {
-  content: "";
-  position: absolute;
-  background-color: #FFE17F;
+.car-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 125px;
   height: 100px;
-  top: 0;
-  left: 0;
+  background-color: #FFE17F;
 }
 
-.delivery-form-button::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/svg/car.svg);
-  background-repeat: no-repeat;
-  width: 47px;
-  height: 31px;
-  top: 35px;
-  left: 38px;
+.car-icon svg {
+  fill: #000000;
 }
 
-.delivery-form-button::after {
+.info-icon-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 100px;
+}
+
+.info-icon {
+  fill: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.info-icon-button::before {
   content: "";
   position: absolute;
-  background-image: url(../images/svg/form.svg);
   width: 40px;
   height: 40px;
-  top: 31px;
-  right: 43px;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
 }
 
-.delivery-form-button:hover::before {
+.delivery-form-button p {
+  margin: 0;
+}
+
+
+.delivery-form-button:hover .info-icon {
+  fill: #000000;
+}
+
+.delivery-form-button:hover .car-icon {
   background-color: #FFC700;
-}
-
-.delivery-form-button:active {
-  opacity: 0.3;
-  outline: none;
 }
 
 .delivery-form-button:focus {
@@ -1102,9 +1105,12 @@ body {
   outline-offset: 2px;
 }
 
+.delivery-form-button:active {
+  opacity: 0.3;
+}
+
 .delivery-form-button:disabled {
   opacity: 0.3;
-
 }
 
 .index-columns {
@@ -1688,7 +1694,12 @@ body {
   z-index: 2;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
+  box-sizing: border-box;
   position: relative;
   margin: auto;
   padding: 72px 60px;
@@ -1716,6 +1727,19 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+
 .modal-title {
   margin: 0;
   margin-bottom: 42px;
@@ -1724,11 +1748,6 @@ body {
   line-height: 50px;
   font-weight: 800;
   color: #000000;
-}
-
-
-.auth-form .field-group {
-  margin: 0;
 }
 
 .order-info {
@@ -1749,14 +1768,69 @@ body {
   flex-direction: column;
 }
 
+
+.form-label {
+  font: inherit;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
 .order-form-field {
   font: inherit;
   font-size: 16px;
   line-height: 20px;
-  padding: 20px;
-  color: rgba(0, 0, 0, 0.3);
+  padding: 20px 40px 20px 20px;
+  color: #000000;
   background-color: #F0F0F0;
+  border: 2px solid transparent;
+}
+
+.order-form-field::placeholder {
+  opacity: 0.3;
+}
+
+.order-field-name {
+  background-image: url(../images/svg/user.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.order-field-email {
+  box-sizing: border-box;
+  background-image: url(../images/svg/email.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   border: none;
+}
+
+.order-field-email-footnote {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+
+.order-form-field:hover {
+  background-color: #DCDCDC;
+}
+
+.order-form-field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: -2px;
+}
+
+.order-form-field:disabled {
+  opacity: 0.3;
+}
+
+.order-form-field:focus:invalid {
+  outline: 2px solid #FF3D3D;
+}
+
+.order-form-field:focus:invalid + .order-field-email-footnote {
+  color: #FF3D3D;
 }
 
 .field-group-user {
@@ -1764,12 +1838,44 @@ body {
 }
 
 .field-group-product {
+  margin: 0;
   width: 540px;
 }
 
+. {
+  position: relative;
+}
+
+.form-label-quantity::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/svg/i-icon.svg);
+  background-repeat: no-repeat;
+  width: 2px;
+  height: 12px;
+  top: 3px;
+  right: 45px;
+  z-index: 1;
+}
+
+.form-label-quantity::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #FFE17F;
+  top: -4px;
+  right: 33px;
+  border-radius: 50%;
+  z-index: 0;
+}
 
 .quantity-selection {
   position: relative;
+}
+
+.quantity-selection:focus:invalid {
+  outline: 2px solid #FF3D3D;
 }
 
 .order-form-field-quantity {
@@ -1828,15 +1934,59 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
-
-.form-label {
-  font: inherit;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
+.quantity-selection-button:hover {
+  background-color: #EBEBEB;
+  opacity: 0.6;
 }
+
+.quantity-selection-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.quantity-selection-button:active {
+  opacity: 0.3;
+}
+
+.quantity-selection-button:disabled {
+  background-color: rgba(235, 235, 235, 0.3);
+  opacity: 0.3;
+}
+
+.send-button-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.send-button {
+  font-size: 18px;
+  padding: 10px 30px;
+}
+
+.send-button::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 8px;
+  background-color: #FFE17F;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.send-button:hover {
+  background-color: #FFE17F;
+}
+
+.send-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.send-button:active {
+  background-color: #FFCC33;
+}
+
 
 /*Catalog*/
 
@@ -1961,24 +2111,16 @@ body {
 }
 
 .catalog-filter-title {
+  box-sizing: border-box;
   line-height: 20px;
   font-weight: 700;
   margin-bottom: 20px;
   padding: 0;
   padding-top: 14px;
-
-}
-
-
-.catalog-filter-title::before {
-  content: "";
-  position: absolute;
   width: 200px;
-  height: 2px;
-  background-color: #000000;
-  top: 0;
-  left: 0;
+  border-top: 2px solid #000000;
 }
+
 
 /* Range */
 .range-scale {
