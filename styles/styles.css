@@ -994,17 +994,19 @@ img {
 
 .delivery-form-wrapper {
   position: relative;
-  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 67px;
 }
 
 .delivery-form-button {
+  min-width: 1160px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding: 39px 125px;
   background-color: #f0f0f0;
-  padding: 38px 320px;
   border: none;
 }
 
@@ -2186,8 +2188,8 @@ img {
   position: absolute;
   top: -2px;
   left: 0;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #cccccc;
   border-radius: 3px;
 }
@@ -2219,10 +2221,6 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.control-input:focus + .control-mark {
-  outline: 2px solid #af4fff;
-}
-
 /* Radio */
 
 .control-input[type="radio"] + .control-mark {
@@ -2239,6 +2237,24 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.control-input[type="checkbox"] + .control-mark::after,
+.control-input[type="radio"] + .control-mark::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.control-input[type="checkbox"]:focus + .control-mark::after,
+.control-input[type="radio"]:focus + .control-mark::after {
+  outline: 2px solid #af4fff;
 }
 
 .catalog-filter-list {
