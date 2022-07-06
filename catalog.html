@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   </head>
 
   <body>
@@ -22,7 +23,7 @@
                     <span class="visually-hidden">Поиск.</span>
                   </label>
                   <div class="searchquery-wrapper">
-                    <input class="searchquery" type="search" name="search" id="site-search" placeholder="Текст поиска">
+                    <input class="searchquery" type="search" name="search" id="site-search" placeholder="Текст поиска" required>
                   </div>
                   <span class="button-search-wrapper">
                     <button class="button-search disabled" type="submit">Найти</button>
@@ -131,9 +132,7 @@
                     </div>
                   </div>
                   <div class="cart-wrapper">
-                    <button class="cart-open-button button">
-                      Открыть корзину
-                    </button>
+                    <button class="cart-open-button button">Открыть корзину</button>
                   </div>
                 </div>
               </li>
@@ -259,9 +258,7 @@
           </form>
           <div class="catalog-right-column">
             <ul class="catalog-option-list">
-              <li class="catalog-option-item">
-                сортировка:
-              </li>
+              <li class="catalog-option-item">сортировка:</li>
               <li class="catalog-option-item">
                 <div class="select sorting-type">
                   <select class="select-control" aria-label="Сортировка">
@@ -335,9 +332,7 @@
             <button class="button button-load-more" type="button">Загрузить ещё</button>
             <ul class="pagination">
               <li class="pagination-item">
-                <a class="pagination-link-control">
-                  Назад
-                </a>
+                <a class="pagination-link-control">Назад</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link pagination-current">1</a>
@@ -355,9 +350,7 @@
                 <a class="pagination-link" href="#">15</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link-control" href="#">
-                  Вперёд
-                </a>
+                <a class="pagination-link-control" href="#">Вперёд</a>
               </li>
             </ul>
           </div>
